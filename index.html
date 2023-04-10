@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Full Pelis</title>
+    <link href="estilos.css" rel="stylesheet">
+    <script type="text/javascript" src=index.js></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <div class="uno">            
+                  
+        <h1 class="titulo">MOVIE STORE</h1>
+        
+        <input type="text" name="" id="titulo" class="txt" placeholder="Enter the movie´s name" />
+        <input type="button" id="boton"  value="Search" id="md1" class = "md" onclick="return buscar(this)">
+                           
+    </div>
+
+    <div class=" contenedor2">           
+        <p>
+            <h1>MOVIES</h1>
+            <table>
+                <tr>
+                    <td>            
+                        <table id="cabecera" class="dat">
+                            
+                            <thead>
+                                <tr> 
+                                    <th></th>
+                                    <th> Title</th>
+                                    <th>Year</th>
+                                    <th>Type</th>
+                                    <th id="imagen">Poster</th>
+                                </tr>
+                            </thead>
+                            <tbody id="informacion"> </tbody>                  
+                            
+                        </table>                
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div  id="detalles"></div>               
+                    </td>           
+                </tr>
+                <tr>
+                    <td>
+
+                        <div  id="imagenes"></div>
+                    </td>            
+                </tr>
+            </table>    
+       </p> 
+    </div>
+    
+    <div class="cuatro">            
+        <input type="button" id="uno" value="1" onclick="return buscar(this)" />
+        <input type="button" id="dos" value="2" onclick="return buscar(this)" /> 
+        <input type="button" id="tres" value="3" onclick="return buscar(this)" />            
+        <input type="button" id="cuatro" value="4" onclick="return buscar(this)" />            
+        <input type="button" id="cinco" value="5" onclick="return buscar(this)" /> 
+        <input type="button" id="cinco" value=">>" onclick="siguiente()" />       
+    </div>
+    
+    <script> //JQUERY
+        
+        $(document).ready(function(){
+            //Creamos el evento mouseover en el elemento con id = texto
+            $('#boton').mouseover(function(){
+                //Al poner el cursor encima cambia el borde a rojo
+                $('#boton').css("border","2px solid red");
+            }); //Asimismo debemos crear el evento mouseout para que vuelva a ponerse negro
+            $('#boton').mouseout(function(){
+                //Al salir el cursor el borde vuelve a ser negro
+                $('#boton').css("border","2px solid black");
+            });            
+        });      
+ 
+    </script>
+      
+</body>
+</html>
+
+
+
